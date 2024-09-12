@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Selamat Datang di Katik</h1>
+
+    </header>
+
+    <main>
+        <section class="selection-content">
+            <button id="hidej" class="btnsegitiga">Segitiga</button>
+            <button id="hides" class="btngenjang">Jajar Genjang</button>
+        </section>
+        
+     
+       <section class="content-segitiga">
+        <aside class="card-segitiga">
+            <header class="header HeaderS">
+                <h1 style="border: 2px;">Luas Segitiga</h1>
+            </header>
+
+            <article class="segitiga-content">
+                <div class="gambar ls"></div>
+               
+            </article>
+
+            <form>
+                <p>Rumus Luas Segitiga :</p>
+                <p class="rumus">L = 1/2 x a x t</p>
+                <hr>
+                <header>
+                    <h1>Hitung Luas Segitiga</h1>
+                </header>
+
+
+                <div class="kotak-input">
+                    <label for="panjang-alas">Panjang Alas :</label>
+                    <input class="input-s" autocomplete="off" id="alas-segi3" required>
+                </div>
+
+                <div class="kotak-input">
+                    <label for="tinggi">Tinggi :</label>
+                    <input class="input-s" autocomplete="off" id="tinggi-segi3" required>
+                </div>
+                
+                <p>Hasil Perhitungan :</p>
+                <input class="inputHasil" id="rluassegi3" name="luas" disabled="true"></input>
+                <input class="inputHasil" id="segi3" name="luas" disabled="true"></input>
+                <br><br><br><br>
+                <input type="button" value="Hitung" class="btnhitung" onclick="luassegitiga()"></input>
+                <button class="btnreset" type="reset">Reset</button>
+                
+            </form>
+            
+        </aside>
+
+        <aside class="card-segitiga">
+            <header class="header HeaderS">
+                <h1 style="border: 2px;">Keliling Segitiga</h1>
+            </header>
+
+            <article class="segitiga-content">
+                <div class="gambar ks"></div>
+                
+            </article>
+ 
+
+            <form>
+                <p>Rumus Keliling Segitiga :</p>
+                <p class="rumus">K = S1 + S2 + S3</p>
+                <hr>
+                <header>
+                    <h1>Hitung Keliling Segitiga</h1>
+                </header>
+
+                <div class="kotak-input">
+                    <label for="panjang-alas">Sisi A :</label>
+                    <input class="input-s" id="nilaiasegi3" autocomplete="off">
+                </div>
+
+                <div class="kotak-input">
+                    <label for="tinggi">Sisi B :</label>
+                    <input class="input-s" id="nilaibsegi3" autocomplete="off">
+                </div>
+
+                <div class="kotak-input">
+                    <label for="tinggi">Sisi C :</label>
+                    <input class="input-s" id="nilaicsegi3" autocomplete="off">
+                </div>
+
+                <p>Hasil Perhitungan :</p>
+                <input class="inputHasil" id="rkelsegi3" name="keliling" disabled="true"></input>
+                <input class="inputHasil" id="kelsegi3" name="keliling" disabled="true"></input>
+                <br><br>
+                <input type="button" value="Hitung" class="btnhitung" onclick="kelilingsegitiga()"></input>
+                <button class="btnreset" type="reset">Reset</button>
+            </form>
+        </aside>
+       </section>
+      
+
+       <!--jajargenjang-->
+       
+       
+        <section class="content-segitiga">
+            <aside class="card-genjang">
+                <header class="header HeaderJG">
+                    <h1 style="border: 2px;">Luas Jajar Genjang</h1>
+                </header>
+
+                <article class="segitiga-content">
+                <div class="gambar ljg"></div>
+                
+                </article>
+
+            <form>
+                <p>Rumus Luas Jajar Genjang :</p>
+                <p class="rumus">L = a x t</p>
+                <hr>
+                <header>
+                    <h1>Hitung Luas Jajar Genjang</h1>
+                </header>
+
+                <div class="kotak-input">
+                    <label for="panjang-alas">Nilai Alas :</label>
+                    <input class="input-jg" id="alasgenjang" autocomplete="off" >
+                </div>
+
+                <div class="kotak-input">
+                    <label for="tinggi">Nilai Tinggi :</label>
+                    <input class="input-jg" id="miringgenjang" autocomplete="off" >
+                </div>
+
+                <p>Hasil Perhitungan :</p>
+                <input class="inputHasil" id="rluasgenj" name="luasgenj"></input>
+                <input class="inputHasil" id="luasgenj" name="luasgenj"></input>
+                <br><br>
+                <input type="button" value="Hitung" class="btnhitung" onclick="luasgenjang()"></input>
+                <button class="btnreset" type="reset">Reset</button>
+            </form>
+            </aside>
+
+            <aside class="card-genjang">
+                <header class="header HeaderJG">
+                    <h1 style="border: 2px;">Keliling Jajar Genjang</h1>
+                </header>
+
+                <article class="segitiga-content">
+                <div class="gambar kjg"></div>
+                    
+                </article>
+
+
+            <form >
+                <p>Rumus Keliling Jajar Genjang :</p>
+                <p class="rumus">K = 2 x ( A + B )</p>
+                <hr>
+                <header>
+                    <h1>Hitung Keliling Jajar Genjang</h1>
+                </header>
+
+                <div class="kotak-input">
+                    <label for="panjang-alas">Nilai Alas :</label>
+                    <input class="input-jg" id="alaskelgenjang" autocomplete="off" >
+                </div>
+
+                <div class="kotak-input">
+                    <label for="tinggi">Nilai Miring :</label>
+                    <input class="input-jg" id="miringkelgenjang" autocomplete="off" >
+                </div>
+
+                <p>Hasil Perhitungan :</p>
+                <input class="inputHasil" id="rkelgenjang" name="kelgenj"></input>
+                <input class="inputHasil" id="kelgenjang" name="kelgenj"></input>
+                <br><br>
+                <input type="button" value="Hitung" class="btnhitung" onclick="kelilinggenjang()"></input>
+                <button class="btnreset" type="reset">Reset</button>
+            </form>
+            </aside>
+        </section>
+         
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
